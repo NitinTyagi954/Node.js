@@ -1,8 +1,3 @@
-1763813503691 : / new request received 
-1763813503744 : /favicon.ico new request received 
-1763813503786 : / new request received 
-1763813503824 : /favicon.ico new request received 
-1763813504003 : / new request received 
-1763813504044 : /favicon.ico new request received 
-1763813515078 : / new request received 
-1763813515119 : /favicon.ico new request received 
+git add .
+git commit -m "learning node.js basic";
+git push origin main
