@@ -1,3 +1,7 @@
+// ⭐ Goal
+
+// Form → GET request → Save data → Show success message.
+
 const express = require("express");
 const fs = require("fs");
 const app = express();
@@ -6,6 +10,10 @@ app.get("/",(req,res)=>{
     res.send(form);
 })
 app.get("/submit" , (req,res) =>{
+    fs.appendFileSync("user_data.txt" , `
+        Name : ${req.query.name} 
+        Age : ${req.query.age} `);
+      
     res.send(`Name : ${req.query.name} <br> 
         Age : ${req.query.age}`);
 });
