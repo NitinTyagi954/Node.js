@@ -32,16 +32,32 @@
 // <h1>Welcome</h1>
 // <p>This is HTML response</p>
 // solution 
+// const express = require("express");
+// const app = express();
+// app.get("/" , (req,res)=>{
+//     res.send(`
+//     <h1>Welcome</h1>
+//     <p>This is HTML response</p>
+//     `
+//     );
+// })
+// app.listen(3000,()=>{
+//     console.log("server started!");
+// })
+
+// question - 2 
+// Q3. Create a route /products that returns this JSON
+// {
+//   "item": "Laptop",
+//   "price": 50000
+// }
+// answer 
 const express = require("express");
 const app = express();
-app.get("/" , (req,res)=>{
-    res.send(`
-    <h1>Welcome</h1>
-    <p>This is HTML response</p>
-    `
-    );
+app.get("/products" , (req,res)=>{
+    res.json({
+        "item": "laptop",
+        "price": "30000",
+    });
 })
-app.listen(3000,()=>{
-    console.log("server started!");
-})
-// answer 
+app.listen(3000);
